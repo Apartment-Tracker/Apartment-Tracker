@@ -1,0 +1,25 @@
+@use 'style' as s;
+
+// Header.jsx
+.header {
+  padding-left: 32px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: s.$primary-color;
+//   border: 1px solid #000;
+}  
+
+.sort {
+  margin-right: 32px;
+}
+
+span {
+  font-size: s.$content-font;
+//   font-weight: bold;
+}
+
+select { 
+  font-size: s.$content-font;
+}

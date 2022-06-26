@@ -7,7 +7,7 @@ import '../stylesheets/apartment.scss';
 import sampleData from '../sampleData';
 
 const Main = props => {
-
+  
   // List of all apartment rows
   let apartmentList = [];
   apartmentList = [

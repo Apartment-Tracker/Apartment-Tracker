@@ -1,20 +1,10 @@
-// Header.jsx
-.header {
-  height: 80px;
-  display:flex;
-  justify-content: space-between;
-  align-items: center;;
-  padding-left: 32px;
-  background-color: #FCFCFC;
-//   border: 1px solid #000;
-}
-
+@use 'style' as s;
 
 // Apartment.jsx (Column)
 .aptTable {
   min-width: 900px;
   height: 45px;
-  font-size: 1.4rem;
+  font-size: s.$content-font;
   display: flex;
   align-items: center;
   padding-left: 32px;
@@ -22,11 +12,10 @@
   // border:1px solid #000;
 
   .colH{
-    height: 45px;
     line-height: 5rem;
     height: 100%;
     font-weight: bold;
-    padding-left:2px;
+    padding-left: 2px;
   }
 }
 
@@ -42,7 +31,7 @@
 // ApartmentDisplay.jsx
 .toLeft { text-align: left; }
 .row { 
-  background-color: #FCFCFC; 
+  background-color: s.$primary-color;
   font-weight: normal; 
   margin-top: 2px;
   // border:1px solid #000;

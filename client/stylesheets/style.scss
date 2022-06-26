@@ -1,7 +1,18 @@
-// Background
+/* Colors */
+$base-color: #F5F5F5;
+$primary-color: #FCFCFC;
+// $secondary-color: #;
+$button-color: #18A0FB;
+
+/* Font Sizes */
+$content-font: 1.4rem;
+$heading-font: 2.4rem;
+
+
+/* Default Background */
 body { background-color: #F5F5F5; }
 
-/*reset*/
+/* Reset */
 body,div,p,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,table,tr,th,td,form,fieldset,legend,input,label,select,textarea,button,
 header,footer,nav,aside,section,article,main,a,span,strong,em,b,i,address {
     margin:0; padding:0;
@@ -15,7 +26,6 @@ body,h1,h2,h3,h4,h5,h6,button {
     font-family:'Montserrat', sans-serif;
     line-height:1;
 }
-
 a {text-decoration:none; color:#383634;}
 ul,ol,li {list-style:none;}
 img,fieldset {border:none; vertical-align:middle;}

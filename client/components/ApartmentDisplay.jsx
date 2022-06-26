@@ -5,7 +5,7 @@ const ApartmentDisplay = props => {
   const { content } = props;
 
   return(
-    <div id="aptRow" className="row">
+    <div className="aptTable row">
       <div className="apartment toLeft">
         {content.apartment_name}
       </div>

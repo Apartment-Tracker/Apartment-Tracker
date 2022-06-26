@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from "./Button.jsx";
+import '../stylesheets/header.scss';
 
 const Header = props => {
   const columns = {
@@ -17,6 +18,16 @@ const Header = props => {
     <div>
       <div className="header">
         <Button btnname="Add Apartment" create='sendPOSTRequest'/>
+        <div className="sort">
+          <span>Sort: </span>
+          <select>
+            <option value="movein">Date</option>
+            <option selected value="rent">Rent</option>
+            <option value="bed">Bed</option>
+            <option value="bath">Bath</option>
+            <option value="sqft">Sq ft</option>
+          </select>
+        </div>
       </div>
       <div className="aptTable">
         <div className="colH apartment toLeft">{columns.c1}</div>
