@@ -8,7 +8,7 @@ const Apartment = props => {
   return(
     <div>
       <ApartmentDisplay content={data}/>
-      <ApartmentDetails />
+      <ApartmentDetails data={data} status='false'/>
     </div>
   );
 };

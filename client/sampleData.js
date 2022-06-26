@@ -1,7 +1,7 @@
 const sampleData = {
     apartment_id:'01', 
     apartment_date:'06/25/2022', 
-    apartment_name: 'Emory Point',
+    apartment_name: 'The Grand at Bayfront',
     apartment_unit: '260',
     apartment_rent: '2835',
     apartment_deposit: '750',
@@ -26,6 +26,9 @@ const sampleData = {
     features_balcony: true,
     features_pool: true,
     features_gym: true,
+    // new data
+    features_ceilinglight: false,
+    features_fan: true,
 };
 
 export default sampleData;

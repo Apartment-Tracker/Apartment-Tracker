@@ -7,7 +7,7 @@
   font-size: s.$content-font;
   display: flex;
   align-items: center;
-  padding-left: 32px;
+  padding-left: s.$side-padding;
   text-align: center;
   // border:1px solid #000;
 
@@ -53,5 +53,37 @@
 }
 
 // ApartmentDetails.jsx
+.detailsHead {
+  margin-top: 24px;
+  padding-left: s.$side-padding;
+  display: none;
+  
+  // border:1px solid orange;
+  h3 {
+    font-size: s.$heading-font;
+    line-height:2.4rem;
+  }
+}
+.detailsBody {
+  margin-top: 24px;
+  padding-left: s.$side-padding;
+  font-size: s.$content-font;
+  padding-bottom: 50px;
+  display: none;
 
+  tables {
+    // border:1px solid #000;
 
+    tr {
+      display:flex;
+      justify-content: space-between;
+
+      td {
+        // border:1px solid #000;
+      }
+    }
+  }
+  .category {
+    font-weight: bold;
+  }
+}
