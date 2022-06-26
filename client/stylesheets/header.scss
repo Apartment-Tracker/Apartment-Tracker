@@ -1,0 +1,58 @@
+body { background-color: #F5F5F5; }
+
+.header {
+  height: 80px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;;
+  padding-left: 32px;
+  background-color: #FCFCFC;
+//   border: 1px solid #000;
+}
+
+#aptRow {
+  min-width: 900px;
+  height: 45px;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  padding-left: 32px;
+  text-align: center;
+//   border:1px solid #000;
+
+  .colH{
+    height: 45px;
+    line-height: 4rem;
+    height: 100%;
+    font-weight: bold;
+    padding-left:2px;
+  }
+}
+
+// columns
+.apartment { width:28%; }
+.location { width:15%; }
+.rent { width:10%; }
+.bedbath { width:13%; }
+.movein { width:12%; }
+.pet { width:9%; }
+.sqft { width:7%; }
+.details { width:6%; }
+
+.row { 
+  background-color: #FCFCFC; 
+  font-weight: normal; 
+  // border:1px solid #000;
+}
+.toLeft { text-align: left; }
+
+.btn{
+  width: 150px;
+  height: 38px;
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 400;
+  background-color: #18A0FB;
+  border-radius: 6px;
+  border:none;
+}
