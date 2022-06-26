@@ -9,11 +9,10 @@ import Home from './components/Home.jsx'
 class App extends Component {
   render() {
     return (
-          <div>
-            <Navigation />
-           {/* <Route path = "/home" component={Home}/> */}
-            <Main />
-          </div>
+      <div>
+        <Navigation />
+        <Main />
+      </div>
     );
   };
 };

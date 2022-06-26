@@ -24,10 +24,11 @@
   },
   "homepage": "https://github.com/Apartment-Tracker/APTracker#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.1.1",
     "concurrently": "^7.2.2",
     "express": "^4.18.1",
-    "react": "^18.2.0",
     "pg": "^8.7.3",
+    "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",
