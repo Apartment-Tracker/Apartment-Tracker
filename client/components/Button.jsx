@@ -1,4 +1,5 @@
 import React from 'react';
+import '../stylesheets/button.scss';
 
 const Button = props => (
   <div>

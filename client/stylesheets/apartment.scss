@@ -1,5 +1,4 @@
-body { background-color: #F5F5F5; }
-
+// Header.jsx
 .header {
   height: 80px;
   display:flex;
@@ -10,7 +9,9 @@ body { background-color: #F5F5F5; }
 //   border: 1px solid #000;
 }
 
-#aptRow {
+
+// Apartment.jsx (Column)
+.aptTable {
   min-width: 900px;
   height: 45px;
   font-size: 1.4rem;
@@ -18,7 +19,7 @@ body { background-color: #F5F5F5; }
   align-items: center;
   padding-left: 32px;
   text-align: center;
-//   border:1px solid #000;
+  // border:1px solid #000;
 
   .colH{
     height: 45px;
@@ -29,7 +30,6 @@ body { background-color: #F5F5F5; }
   }
 }
 
-// columns
 .apartment { width:24%; }
 .location { width:12%; }
 .rent { width:11%; }
@@ -39,21 +39,30 @@ body { background-color: #F5F5F5; }
 .sqft { width:9%; }
 .details { width:9%; }
 
+// ApartmentDisplay.jsx
+.toLeft { text-align: left; }
 .row { 
   background-color: #FCFCFC; 
   font-weight: normal; 
   margin-top: 2px;
   // border:1px solid #000;
 }
-.toLeft { text-align: left; }
 
-.btn{
-  width: 150px;
-  height: 38px;
-  color: #ffffff;
-  font-size: 1.4rem;
-  font-weight: 400;
-  background-color: #18A0FB;
-  border-radius: 6px;
-  border:none;
+@keyframes updown {
+  0% { transform:translateY(0px); }
+  20% { transform:translateY(2px); }
+  90% { transform:translateY(-2px); }
 }
+.showDetails {
+    font-size: 1.8rem;
+    animation: updown 1s infinite;
+
+    &:hover{
+        cursor: pointer;
+        opacity: 60%;
+    }
+}
+
+// ApartmentDetails.jsx
+
+

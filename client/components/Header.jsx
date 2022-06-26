@@ -18,7 +18,7 @@ const Header = props => {
       <div className="header">
         <Button btnname="Add Apartment" create='sendPOSTRequest'/>
       </div>
-      <div id="aptRow">
+      <div className="aptTable">
         <div className="colH apartment toLeft">{columns.c1}</div>
         <div className="colH location toLeft">{columns.c2}</div>
         <div className="colH rent">{columns.c3}</div>
