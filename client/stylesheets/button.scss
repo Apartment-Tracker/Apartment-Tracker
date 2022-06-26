@@ -1,0 +1,19 @@
+@use 'style' as s;
+
+.btn{
+  width: 150px;
+  height: 38px;
+  color: #ffffff;
+  font-size: s.$content-font;
+  font-weight: 400;
+  background-color: s.$button-color;
+  border-radius: 6px;
+  border:none;
+  transition: transform 0.2s;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+      transform: scale(0.98);
+    }
+}
