@@ -4,13 +4,24 @@ import CreateApartment from "./CreateApartment.jsx";
 import Apartment from "./Apartment.jsx";
 import '../stylesheets/header.scss';
 
+import sampleData from '../sampleData';
 
 const Main = props => {
+
+  // List of all apartment rows
+  let apartmentList = [];
+  apartmentList = [
+    <Apartment data={sampleData} />, 
+    <Apartment data={sampleData} />, 
+    <Apartment data={sampleData} />, 
+    <Apartment data={sampleData} />, 
+  ];
+
   return(
     <div>
       <Header />
       <CreateApartment />
-      <Apartment />
+      {apartmentList}
     </div>
   );
 };

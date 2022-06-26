@@ -22,7 +22,7 @@ body { background-color: #F5F5F5; }
 
   .colH{
     height: 45px;
-    line-height: 4rem;
+    line-height: 5rem;
     height: 100%;
     font-weight: bold;
     padding-left:2px;
@@ -30,18 +30,19 @@ body { background-color: #F5F5F5; }
 }
 
 // columns
-.apartment { width:28%; }
-.location { width:15%; }
-.rent { width:10%; }
+.apartment { width:24%; }
+.location { width:12%; }
+.rent { width:11%; }
 .bedbath { width:13%; }
-.movein { width:12%; }
+.movein { width:13%; }
 .pet { width:9%; }
-.sqft { width:7%; }
-.details { width:6%; }
+.sqft { width:9%; }
+.details { width:9%; }
 
 .row { 
   background-color: #FCFCFC; 
   font-weight: normal; 
+  margin-top: 2px;
   // border:1px solid #000;
 }
 .toLeft { text-align: left; }
