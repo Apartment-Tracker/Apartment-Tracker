@@ -9,11 +9,6 @@ class App extends Component {
       <div>
         <Navigation />
         <Main />
-        <ul>
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-        </ul>
       </div>
     );
   };
