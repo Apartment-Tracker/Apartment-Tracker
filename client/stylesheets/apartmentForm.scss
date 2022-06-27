@@ -1,0 +1,28 @@
+@use 'style' as s;
+
+@keyframes docshow{
+  0% {opacity:0;}
+  100%{opacity:1}
+}
+
+#apartmentForm {
+  position:absolute;
+  top: 100px; left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  min-width:480px;
+  height: 580px;
+  border-radius: 10px;
+  background-color: rgba(215, 215, 215, 0.9);
+  animation: docshow 0.15s linear;
+  display: none;
+  // border:1px solid #000;
+}
+.btnbox {
+  position:absolute;
+  width:76%;
+  display:flex; 
+  justify-content: space-around;
+  left:50%; bottom: 34px;
+  transform: translateX(-50%);
+}

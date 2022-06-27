@@ -1,16 +1,34 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ApartmentDisplay from "./ApartmentDisplay.jsx";
 import ApartmentDetails from "./ApartmentDetails.jsx";
 
-const Apartment = props => {
-  const { data } = props; 
+class Apartment extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      show: false
+    };
 
-  return(
-    <div>
-      <ApartmentDisplay content={data}/>
-      <ApartmentDetails data={data} status='false'/>
-    </div>
-  );
+    this.showDetails = this.showDetails.bind(this);
+  }
+
+  showDetails() {
+    const show = this.state.show;
+    show = show ? !show : show;
+    this.setState({ show })
+  }
+  
+  render() {
+    const { aptInfo } = this.props.aptInfo;
+    const details = this.state.stats ? <ApartmentDetails aptInfo={aptInfo} status={this.state.show} /> : <></>;
+
+    return (
+      <div>
+        <ApartmentDisplay aptInfo={aptInfo} showDetails={this.showDetails} />
+        {details}
+      </div>
+    )
+  }
 };
 
 export default Apartment;
