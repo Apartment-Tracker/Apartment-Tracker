@@ -1,27 +1,4 @@
 -- sql
-
--- CREATE TABLE customers(
---    customer_id INT GENERATED ALWAYS AS IDENTITY,
---    customer_name VARCHAR(255) NOT NULL,
---    PRIMARY KEY(customer_id)
--- );
-
--- CREATE TABLE contacts(
---    contact_id INT GENERATED ALWAYS AS IDENTITY,
---    customer_id INT,
---    contact_name VARCHAR(255) NOT NULL,
---    phone VARCHAR(15),
---    email VARCHAR(100),
---    PRIMARY KEY(contact_id),
---    CONSTRAINT fk_customer
---       FOREIGN KEY(customer_id) 
--- 	  REFERENCES customers(customer_id)
--- );
-
--- features_id INT FOREIGN KEY REFERENCES features(_id)
--- locations_id INT FOREIGN KEY REFERENCES locations(_id)
--- "thedate" timestamptz NOT NULL DEFAULT (now())
-
  CREATE TABLE features (
     "_id" INT NOT NULL GENERATED ALWAYS AS IDENTITY,
     "floor" VARCHAR,
@@ -70,21 +47,6 @@
     ) WITH (
         OIDS=FALSE
     );
-
--- CONSTRAINT "apartment_features_fk" FOREIGN KEY("features_id") REFERENCES features ("_id"),
-    -- CONSTRAINT "apartment_location_fk" FOREIGN KEY("locations_id") REFERENCES locations ("_id")
-    -- CONSTRAINT "fk_features" FOREIGN KEY("features_id") REFERENCES features ("_id"),
-    -- CONSTRAINT "fk_locations" FOREIGN KEY("locations_id") REFERENCES locations("_id")
-    -- "features_id" INTEGER REFERENCES features ("_id"),
-    -- "location_id" INTEGER REFERENCES location ("_id"));
-
--- CONSTRAINT "apartment_features_fk" FOREIGN KEY ("features_id") REFERENCES features ("_id"),
--- CONSTRAINT "apartment_location_fk" FOREIGN KEY ("location_id") REFERENCES location ("_id"),
-
--- ALTER TABLE apartment ADD CONSTRAINT "apartment_features_fk" FOREIGN KEY ("features_id") REFERENCES features ("_id");
--- ALTER TABLE apartment ADD CONSTRAINT "apartment_location_fk" FOREIGN KEY ("locations_id") REFERENCES locations ("_id");
-
-
 
 INSERT INTO features ("floor") VALUES ('hardwood');
 INSERT INTO locations ("city", "state", "zipcode", "address") VALUES ('LA', 'CA', '99999', '123 main st');

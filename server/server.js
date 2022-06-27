@@ -6,12 +6,11 @@ const apiRouter = require('./routes/api');
 
 // Access to Frontend
 app.use(express.static(path.resolve(__dirname, '../client')));
-// app.use('./client/stylesheets', express.static(path.resolve(__dirname + './client/stylesheets')));
-// app.use('./client/index.html', express.static(path.resolve(__dirname + './client/index.html')));
 
 app.use(express.json());
 
 app.use('/api', apiRouter);
+
 // Local Error Handler
 app.use((req, res) => res.sendStatus(404));
 

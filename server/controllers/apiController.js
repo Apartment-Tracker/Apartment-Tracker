@@ -84,15 +84,11 @@ apiController.addApt = async (req, res, next) => {
       ceilinglight,
     ];
     const params3 = [city, state, zipcode, address];
-    // const result = await db.query(text, params);
+
     const result1 = await db.query(text1, params1);
-
     const result2 = await db.query(text2, params2);
-
     const result3 = await db.query(text3, params3);
 
-    // res.locals.aptDetails = result.rows[0];
-    // console.log(res.locals.aptDetails);
     next();
   } catch (err) {
     next({
@@ -103,7 +99,6 @@ apiController.addApt = async (req, res, next) => {
 };
 
 apiController.updateApt = async (req, res, next) => {
-  // May need to get id or name from client
   const { id } = req.params;
   const {
     name,
@@ -180,8 +175,22 @@ WHERE _id = ${id}`;
   }
 };
 
+
 apiController.deleteApt = async (req, res, next) => {
+  const { id } = req.params;
   try {
+    const text1 = `DELETE FROM features
+    WHERE _id = ${id}`;
+    const text2 = `DELETE FROM locations
+    WHERE _id = ${id}`;
+    const text3 = `DELETE FROM apartment
+    WHERE _id = ${id}`;
+
+    const result1 = await db.query(text1);
+    const result2 = await db.query(text2);
+    const result3 = await db.query(text3);
+
+    return next();
   } catch (err) {
     next({
       log: `apiController.deleteApt: ERROR ${err}`,
@@ -189,5 +198,6 @@ apiController.deleteApt = async (req, res, next) => {
     });
   }
 };
+
 
 module.exports = apiController;
