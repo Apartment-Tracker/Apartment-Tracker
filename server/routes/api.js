@@ -15,7 +15,8 @@ router.post('/', apiController.addApt, (req, res) => {
 });
 
 //PATCH request to update an existing row
-router.patch('/', (req, res) => {
+router.put('/:id', apiController.updateApt, (req, res) => {
+  console.log('UPDATED');
   res.status(200).json({});
 });
 
