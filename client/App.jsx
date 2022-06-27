@@ -11,7 +11,7 @@ class App extends Component {
         <Main />
       </div>
     );
-  };
-};
+  }
+}
 
 export default App;

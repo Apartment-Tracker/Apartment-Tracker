@@ -5,8 +5,8 @@ const apiController = require('../controllers/apiController.js');
 //Require controller/middleware
 
 //GET request to display all rows
-router.get('/', (req, res) => {
-  res.status(200).json({});
+router.get('/', apiController.getApt, (req, res) => { 
+  res.status(200).json(res.locals.aptData);
 });
 
 //POST request to create a new row
@@ -15,12 +15,13 @@ router.post('/', apiController.addApt, (req, res) => {
 });
 
 //PATCH request to update an existing row
-router.patch('/', (req, res) => {
+router.put('/:id', apiController.updateApt, (req, res) => {
+  console.log('UPDATED');
   res.status(200).json({});
 });
 
 //DELETE request to delete a row
-router.delete('/', (req, res) => {
+router.delete('/:id', apiController.deleteApt, (req, res) => {
   res.status(200).json({});
 });
 
