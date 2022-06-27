@@ -108,35 +108,35 @@ class ApartmentForm extends Component {
                 <div id="utilities">
                   <div>
                     <input type = "checkbox" id = "gym" name="gym"/>
-                    <label for = "gym"> Gym</label>
+                    <label htmlFor = "gym"> Gym</label>
                   </div>
                   <div>
                     <input type = "checkbox" id = "pet" name="pet"/>
-                    <label for = "pet"> Pet</label>
+                    <label htmlFor = "pet"> Pet</label>
                   </div>
                   <div>
                     <input type = "checkbox" id = "balcony" name="balcony"/>
-                    <label for = "balcony"> Balcony</label>
+                    <label htmlFor = "balcony"> Balcony</label>
                   </div>
                   <div>
                     <input type = "checkbox" id = "patio" name="patio"/>
-                    <label for = "patio"> Patio</label>
+                    <label htmlFor = "patio"> Patio</label>
                   </div>
                   <div>
                     <input type = "checkbox" id = "fan" name="fan"/>
-                    <label for = "fan"> Fan</label>
+                    <label htmlFor = "fan"> Fan</label>
                   </div>
                   <div>
                     <input type = "checkbox" id = "dishwasher" name="dishwasher"/>
-                    <label for = "dishwasher"> Dishwasher</label>
+                    <label htmlFor = "dishwasher"> Dishwasher</label>
                   </div>
                   <div>
                     <input type = "checkbox" id = "ceiling" name="ceiling"/>
-                    <label for = "ceiling"> Ceiling Light</label>
+                    <label htmlFor = "ceiling"> Ceiling Light</label>
                   </div>
                   <div>
                     <input type = "checkbox" id = "air" name="air"/>
-                    <label for = "air"> Air Conditioning</label>
+                    <label htmlFor = "air"> Air Conditioning</label>
                   </div>
                 </div>
                 <div className="contact">
