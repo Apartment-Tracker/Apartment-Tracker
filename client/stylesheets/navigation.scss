@@ -5,6 +5,7 @@
     padding: 9px s.$side-padding 0 s.$side-padding;
     width:100%;
     display:flex;
+    justify-content: space-between;;
     align-items: center;
     background-color: s.$primary-color;
     // border:1px solid #000;
@@ -17,6 +18,7 @@
     border-radius: 5px;
     background: url("../media/logo.png") center/cover no-repeat;
     background-color: skyblue;
+    // border:1px solid #000;
 }
 
 .rightnav{  
@@ -48,8 +50,6 @@
 }
 
 .leftnav {
-  position:absolute;
-  right:s.$side-padding;
     height:50px;
     float:right;
     padding-top:12px;
@@ -59,18 +59,19 @@
       cursor: pointer;
       position: relative;
       top:8px;
-      right:180px;
+      right:200px;
       font-size: 12px;
-
+      &:hover { opacity: 0.7; }
+      transition:opacity 0.2s linear;
     }
     #search{
         float:left;
         height: 28px;
-        width: 180px;
+        width: 200px;
         margin-right: 10px;
         border-radius: 15px;
         border-style: none;
-        background-color: #E5E5E5;
+        background-color: s.$secondary-color;
         padding-left: 30px;
     }
 

@@ -4,7 +4,8 @@ const ApartmentDetails = props => {
   const { data, display } = props;
     
   return (
-    <div>
+    <div className="fullDetail">
+      <div className="editInfo">Edit</div>
       <div className="detailsHead">
         <h3><a href="#">{data.apartment_name}</a> (Unit {data.apartment_unit})</h3>
         <p>

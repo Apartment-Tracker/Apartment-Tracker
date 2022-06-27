@@ -6,7 +6,7 @@ import './stylesheets/style.scss';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div id='app'>
         <Navigation />
         <Main />
       </div>

@@ -5,13 +5,15 @@ import '@fortawesome/fontawesome-free/js/all';
 const Navigation = props => {
   return(
     <div id="nav">
-      <div id="logo"></div>
-      <div className="rightnav">
-        <div>
-          <h2>Category Name</h2>
-          <div id="back">
-            <i className="fa-solid fa-caret-left"></i>
-            <p className="back"> Back to Category</p>
+      <div>
+        <div id="logo"></div>
+        <div className="rightnav">
+          <div>
+            <h2>Category Name</h2>
+            <div id="back">
+              <i className="fa-solid fa-caret-left"></i>
+              <p className="back"> Back to Category</p>
+            </div>
           </div>
         </div>
       </div>

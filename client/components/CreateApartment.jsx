@@ -1,9 +1,10 @@
 import React from 'react';
 import Button from "./Button.jsx";
+import '../stylesheets/createApt.scss'
 
 const CreateApartment = props => (
-  <div>
-    {/* <Button btnname="Save"/> */}
+  <div id="createApt">
+    <Button btnname="Save"/>
   </div>
 )
 
