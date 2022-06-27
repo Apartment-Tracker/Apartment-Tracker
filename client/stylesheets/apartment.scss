@@ -1,0 +1,89 @@
+@use 'style' as s;
+
+// Apartment.jsx (Column)
+.aptTable {
+  min-width: 900px;
+  height: 45px;
+  font-size: s.$content-font;
+  display: flex;
+  align-items: center;
+  padding-left: s.$side-padding;
+  text-align: center;
+  // border:1px solid #000;
+
+  .colH{
+    line-height: 5rem;
+    height: 100%;
+    font-weight: bold;
+    padding-left: 2px;
+  }
+}
+
+.apartment { width:24%; }
+.location { width:12%; }
+.rent { width:11%; }
+.bedbath { width:13%; }
+.movein { width:13%; }
+.pet { width:9%; }
+.sqft { width:9%; }
+.details { width:9%; }
+
+// ApartmentDisplay.jsx
+.toLeft { text-align: left; }
+.row { 
+  background-color: s.$primary-color;
+  font-weight: normal; 
+  margin-top: 2px;
+  // border:1px solid #000;
+}
+
+@keyframes updown {
+  0% { transform:translateY(0px); }
+  20% { transform:translateY(2px); }
+  90% { transform:translateY(-2px); }
+}
+.showDetails {
+    font-size: 1.8rem;
+    animation: updown 1s infinite;
+
+    &:hover{
+        cursor: pointer;
+        opacity: 60%;
+    }
+}
+
+// ApartmentDetails.jsx
+.detailsHead {
+  margin-top: 24px;
+  padding-left: s.$side-padding;
+  display: none;
+  
+  // border:1px solid orange;
+  h3 {
+    font-size: s.$heading-font;
+    line-height:2.4rem;
+  }
+}
+.detailsBody {
+  margin-top: 24px;
+  padding-left: s.$side-padding;
+  font-size: s.$content-font;
+  padding-bottom: 50px;
+  display: none;
+
+  tables {
+    // border:1px solid #000;
+
+    tr {
+      display:flex;
+      justify-content: space-between;
+
+      td {
+        // border:1px solid #000;
+      }
+    }
+  }
+  .category {
+    font-weight: bold;
+  }
+}
