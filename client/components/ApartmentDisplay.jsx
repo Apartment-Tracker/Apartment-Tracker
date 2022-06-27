@@ -6,15 +6,15 @@ const ApartmentDisplay = props => {
   
   // Match with DB column names
   const data = {
-    aptName: aptInfo.apartment_name,
-    aptCity: aptInfo.location_city,
-    aptState: aptInfo.location_state,
-    aptRent: aptInfo.apartment_rent,
-    aptBed: aptInfo.apartment_bed,
-    aptBath: aptInfo.apartment_bath,
-    aptMovein: aptInfo.apartment_movein,
-    aptPet: aptInfo.apartment_pet,
-    aptSqft: aptInfo.apartment_sqft,
+    aptName: aptInfo.name,
+    aptCity: aptInfo.city,
+    aptState: aptInfo.state,
+    aptRent: aptInfo.rent,
+    aptBed: aptInfo.bed,
+    aptBath: aptInfo.bath,
+    aptMovein: aptInfo.movein,
+    aptPet: aptInfo.pet,
+    aptSqft: aptInfo.sqft,
   }
 
   return(
@@ -29,7 +29,7 @@ const ApartmentDisplay = props => {
         {data.aptRent}
       </div>
       <div className="bedbath">
-        {data.aptBed.concat(" / " + data.aptBath)}
+        {/* {data.aptBed.concat(" / " + data.aptBath)} */}
       </div>
       <div className="movein">
         {data.aptMovein ? data.aptMovein : 'null'}
@@ -40,7 +40,7 @@ const ApartmentDisplay = props => {
       <div className="sqft sqftH">
         {data.aptSqft}
       </div>
-      <div className="details dH" onClick={showDetails()}>
+      <div className="details dH">
         <i className="showDetails fa-solid fa-caret-down"></i>
       </div>
     </div>

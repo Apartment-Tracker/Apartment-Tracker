@@ -9,23 +9,25 @@ class Apartment extends Component {
       show: false
     };
 
-    this.showDetails = this.showDetails.bind(this);
+    // this.showDetails = this.showDetails.bind(this);
   }
 
-  showDetails() {
-    const show = this.state.show;
-    show = show ? !show : show;
-    this.setState({ show })
-  }
+  // showDetails() {
+  //   const show = this.state.show;
+  //   show = show ? !show : show;
+  //   this.setState({ show })
+  // }
   
   render() {
-    const { aptInfo } = this.props.aptInfo;
-    const details = this.state.stats ? <ApartmentDetails aptInfo={aptInfo} status={this.state.show} /> : <></>;
+    const { aptInfo } = this.props;
+    // const details = this.state.stats ? <ApartmentDetails aptInfo={aptInfo} status={this.state.show} /> : <></>;
 
     return (
       <div>
-        <ApartmentDisplay aptInfo={aptInfo} showDetails={this.showDetails} />
-        {details}
+        {/* <ApartmentDisplay aptInfo={aptInfo} showDetails={this.showDetails} /> */}
+        <ApartmentDisplay aptInfo={aptInfo} />
+        <ApartmentDetails aptInfo={aptInfo} />
+        {/* {details} */}
       </div>
     )
   }

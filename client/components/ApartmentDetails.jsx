@@ -5,30 +5,30 @@ const ApartmentDetails = props => {
     
   // Match with DB column names
   const data = {
-    aptName: aptInfo.apartment_name,
-    aptUnit: aptInfo.apartment_unit,
-    aptUrl: aptInfo.apartment_url,
-    aptAddress: aptInfo.location_address,
-    aptCity: aptInfo.location_city,
-    aptState: aptInfo.location_state,
-    aptZipcode: aptInfo.location_zipcode,
-    aptContact: aptInfo.apartment_contact,
-    aptRent: aptInfo.apartment_rent,
-    aptDeposit: aptInfo.apartment_deposit,
-    aptFloor: aptInfo.features_floor,
-    aptBalcony: aptInfo.features_balcony,
-    aptDishwasher: aptInfo.features_dishwasher,
-    aptMovein: aptInfo.apartment_movein,
-    aptLease: aptInfo.apartment_lease,
-    aptGym: aptInfo.features_gym,
-    aptPatio: aptInfo.features_patio,
-    aptCeilinglight: aptInfo.features_ceilinglight,
-    aptBed: aptInfo.apartment_bed,
-    aptBath: aptInfo.apartment_bath,
-    aptSqft: aptInfo.apartment_sqft,
-    aptPet: aptInfo.apartment_pet,
-    aptFan: aptInfo.features_fan,
-    aptAc: aptInfo.features_ac,
+    aptName: aptInfo.name,
+    aptUnit: aptInfo.unit,
+    aptUrl: aptInfo.url,
+    aptAddress: aptInfo.address,
+    aptCity: aptInfo.city,
+    aptState: aptInfo.state,
+    aptZipcode: aptInfo.zipcode,
+    aptContact: aptInfo.contact,
+    aptRent: aptInfo.rent,
+    aptDeposit: aptInfo.deposit,
+    aptFloor: aptInfo.floor,
+    aptBalcony: aptInfo.balcony,
+    aptDishwasher: aptInfo.dishwasher,
+    aptMovein: aptInfo.movein,
+    aptLease: aptInfo.lease,
+    aptGym: aptInfo.gym,
+    aptPatio: aptInfo.patio,
+    aptCeilinglight: aptInfo.ceilinglight,
+    aptBed: aptInfo.bed,
+    aptBath: aptInfo.bath,
+    aptSqft: aptInfo.sqft,
+    aptPet: aptInfo.pet,
+    aptFan: aptInfo.fan,
+    aptAc: aptInfo.ac,
   }
 
   return (
@@ -36,7 +36,7 @@ const ApartmentDetails = props => {
       <div className="editInfo">Edit</div>
       <div className="detailsHead">
         <h3>
-          <a href={data.aptUrl} target="_blank">{data.aptName}</a> 
+          <a href={data.aptUrl} target="_blank">{data.aptName} </a> 
           (Unit {data.aptUnit})
         </h3>
         <p>

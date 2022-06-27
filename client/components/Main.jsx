@@ -16,20 +16,19 @@ class Main extends Component {
   }
 
   componentDidMount() {
-    fetch('/api/')
+    fetch('/api')
       .then(res => res.json())
-      .then(({ apartments }) => {
-        console.log('Found?', apartments);
+      .then((apartments) => {
         const { aptIds, aptsById } = this.formatApartments(apartments);
-        return this.setState({ aptIds, aptsById, fetchedApts: false });
+        return this.setState({ aptIds, aptsById, fetchedApts: true });
       })
       .catch(err => console.log('Main.componentDidMount: load apartments: Error: ', err));
   }
 
   formatApartments(apartments, state = this.state) {
     // Load current state props
-    const aptIds = [...state.aptIds];
-    const aptsById = JSON.parse(JSON.stringify(state.aptDate));
+    const aptIds = [...this.state.aptIds];
+    const aptsById = JSON.parse(JSON.stringify(this.state.aptsById));
     let newAptId = state.aptIds.length;
 
     apartments.forEach((apt, index) => {
