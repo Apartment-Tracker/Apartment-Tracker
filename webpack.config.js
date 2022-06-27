@@ -1,4 +1,8 @@
 const path = require('path');
+const webpack = require('webpack');
+const dotenv = require('dotenv').config({
+  path: path.join(__dirname, '.env'),
+});
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -9,12 +13,12 @@ module.exports = {
     filename: 'bundle.js',
   },
   devServer: {
-    static: { 
-        publicPath: '/dist',
-        directory: path.join(__dirname, 'dist') 
+    static: {
+      publicPath: '/dist',
+      directory: path.resolve(__dirname, 'dist'),
     },
     proxy: {
-      '/api/**': { target: 'http://localhost:3000/' }
+      '/api': { target: 'http://localhost:3000/' },
     },
   },
   module: {
@@ -23,13 +27,18 @@ module.exports = {
         test: /\.jsx?/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-        options: { presets: ['@babel/preset-react', '@babel/preset-env']},
+        options: { presets: ['@babel/preset-react', '@babel/preset-env'] },
       },
       {
         test: /\.(css|scss)/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
-    ]
+    ],
   },
-  plugins: [new HtmlWebpackPlugin({ template: './client/index.html' })],
-}
+  plugins: [
+    new HtmlWebpackPlugin({ template: './client/index.html' }),
+    new webpack.DefinePlugin({
+      'process.env': dotenv.parsed,
+    }),
+  ],
+};
