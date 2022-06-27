@@ -21,7 +21,7 @@ router.put('/:id', apiController.updateApt, (req, res) => {
 });
 
 //DELETE request to delete a row
-router.delete('/', (req, res) => {
+router.delete('/:id', apiController.deleteApt, (req, res) => {
   res.status(200).json({});
 });
 
