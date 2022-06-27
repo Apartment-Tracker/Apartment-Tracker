@@ -8,6 +8,7 @@ class ApartmentForm extends Component {
     document.getElementById('apartmentForm').style.display='none';
   }
 
+
   render() {
     return (
       <div id="apartmentForm">
@@ -74,24 +75,24 @@ class ApartmentForm extends Component {
                 <div className="locInfo">
                   <div className="horizontalBlock">
                     <label>City</label><br/>
-                    <input type="text" name="name" className="cityBox inputbox" />
+                    <input type="text" name="name" className="cityBox inputbox"/>
                   </div>
                   <div className="horizontalBlock">
                     <div className="space">
                       <label>State</label><br/>
-                      <input type="text" name="state" className="smallBox inputbox" />
+                      <input type="text" name="state" className="smallBox inputbox"/>
                     </div>
                   </div>
                   <div className="horizontalBlock">
                     <div className="space">
                       <label>Zipcode</label><br/>
-                      <input type="text" name="zipcode" className="sqftBox inputbox" />
+                      <input type="text" name="zipcode" className="sqftBox inputbox"/>
                     </div>
                   </div>
                 </div>
                 <div className="horizontalBlock">
                   <label>Address</label><br/>
-                  <input type="text" name="address" className="addressBox inputbox" />
+                  <input type="text" name="address" className="addressBox inputbox">
                 </div>
               </div>
 
@@ -107,7 +108,7 @@ class ApartmentForm extends Component {
                 </div>
                 <div id="utilities">
                   <div>
-                    <input type = "checkbox" id = "gym" name="gym"/>
+                    <input type = "checkbox" id = "gym" name="gym" />
                     <label for = "gym"> Gym</label>
                   </div>
                   <div>
@@ -155,7 +156,7 @@ class ApartmentForm extends Component {
           </form>
         </div>
         <div className="btnbox">
-          <Button btnname="Save"/>
+          <Button btnname="Save" onClick={this.saveApt}/>
           <Button btnname="Cancel" onClick={this.cancel}/>
         </div>
       </div> 
