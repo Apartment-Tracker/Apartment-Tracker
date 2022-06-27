@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
 });
 
 //POST request to create a new row
-router.post('/', (req, res) => {
+router.post('/', apiController.addApt, (req, res) => {
   res.status(200).json({});
 });
 
