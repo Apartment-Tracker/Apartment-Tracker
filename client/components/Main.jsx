@@ -1,27 +1,63 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Header from "./Header.jsx";
-import CreateApartment from "./CreateApartment.jsx";
-import Apartment from "./Apartment.jsx";
+import ApartmentForm from "./ApartmentForm.jsx";
+import Apartments from "./Apartments.jsx";
 import '../stylesheets/apartment.scss';
 
-import sampleData from '../sampleData';
+class Main extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      aptIds: [], 
+      aptsById: {},
+      fetchedApts: false,
+    };
+    this.formatApartments = this.formatApartments.bind(this);
+  }
 
-const Main = props => {
-  
-  // List of all apartment rows
-  let apartmentList = [];
-  apartmentList = [
-    <Apartment data={sampleData} />, 
-    <Apartment data={sampleData} />,
-  ];
+  componentDidMount() {
+    fetch('/api')
+      .then(res => res.json())
+      .then((apartments) => {
+        const { aptIds, aptsById } = this.formatApartments(apartments);
+        return this.setState({ aptIds, aptsById, fetchedApts: true });
+      })
+      .catch(err => console.log('Main.componentDidMount: load apartments: Error: ', err));
+  }
 
-  return(
-    <div>
-      <Header />
-      <CreateApartment />
-      {apartmentList}
-    </div>
-  );
+  formatApartments(apartments, state = this.state) {
+    // Load current state props
+    const aptIds = [...this.state.aptIds];
+    const aptsById = JSON.parse(JSON.stringify(this.state.aptsById));
+    let newAptId = state.aptIds.length;
+
+    apartments.forEach((apt, index) => {
+      // Set index of each apartment data
+      if (newAptId) apt.id = ++newAptId;
+      else apt.id = index+1;
+      // Add each apartment data
+      if (!aptsById[newAptId]) {
+        aptIds.push(apt.id);
+        aptsById[apt.id] = apt;
+      }
+    });
+    return { aptIds, aptsById };
+  }
+
+  render() {
+    const data = {
+      aptIds: this.state.aptIds, 
+      apartments: this.state.aptsById,
+    };
+
+    return (
+      <div>
+        <Header />
+        <ApartmentForm />
+        <Apartments {...data}/>
+      </div>
+    );
+  }
 };
 
 export default Main;

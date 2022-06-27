@@ -1,0 +1,90 @@
+@use 'style' as s;
+
+@keyframes docshow{
+  0% {opacity:0;}
+  100%{opacity:1}
+}
+
+#apartmentForm {
+  position:absolute;
+  top: 100px; left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  min-width: 650px;
+  // min-width: 480px;
+  height: 580px;
+  border-radius: 10px;
+  background-color: rgba(215, 215, 215, 0.9);
+  animation: docshow 0.15s linear;
+  display: none;
+  // border:1px solid #000;
+}
+.btnbox {
+  position:absolute;
+  width:76%;
+  display:flex; 
+  justify-content: space-around;
+  left:50%; bottom: 34px;
+  transform: translateX(-50%);
+}
+.horizontalBlock{
+  display: inline-block;
+  margin-top: 15px;
+}
+.space{
+  margin-left: 8px;
+}
+.inputbox {
+  height: 25px; 
+  margin-top: 5px;
+
+  &.nameBox { width: 350px; }
+  &.smallBox { width: 40px; }
+  &.sqftBox { width: 80px; }
+  &.leaseBox { width: 160px; }
+  &.addressBox { width: 340px; }
+  &.unitBox { width: 80px; }
+  &.movinBox { width: 260px; }
+  &.rentBox { width: 200px; }
+  &.depositBox { width: 140px; }
+  &.cityBox { width: 205px; }
+}
+
+#formGrid{
+  display: grid;
+  grid-template-columns: 500px 300px;
+  padding-top: 30px;
+  padding-left: 30px;
+}
+h3{
+  font-size: s.$heading-font;
+}
+body{
+  font-size: s.$content-font;
+}
+.aptInfo{
+  margin-top: 15px;
+}
+// .location{
+  // margin-top: 30px;
+// }
+.moreInfo{
+  margin-top: 15px;
+  line-height: 25px;
+}
+#utilities{
+  margin-top: 10px;
+  line-height: 25px;
+}
+.contact{
+  height:30px;
+  margin-top: 23px;
+}
+#contactBox{
+  width: 170px;
+  height: 30px;
+  margin-top: 5px;
+}
+.link{
+  margin-top: 16px;
+}

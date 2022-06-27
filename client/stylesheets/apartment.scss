@@ -2,12 +2,11 @@
 
 // Apartment.jsx (Column)
 .aptTable {
-  min-width: 900px;
   height: 45px;
   font-size: s.$content-font;
   display: flex;
   align-items: center;
-  padding-left: s.$side-padding;
+  padding: 0 s.$side-padding;
   text-align: center;
   // border:1px solid #000;
 
@@ -37,6 +36,12 @@
   // border:1px solid #000;
 }
 
+.fullDetail {
+  padding-bottom: 30px;
+  background-color: s.$secondary-color;
+  // display:none;
+  // border:1px solid #000;
+}
 @keyframes updown {
   0% { transform:translateY(0px); }
   20% { transform:translateY(2px); }
@@ -45,45 +50,61 @@
 .showDetails {
     font-size: 1.8rem;
     animation: updown 1s infinite;
-
+    text-align: right;
     &:hover{
         cursor: pointer;
         opacity: 60%;
     }
 }
 
+
 // ApartmentDetails.jsx
+.editInfo {
+  float:right;
+  line-height:90px;
+  margin-right: 50px;
+  cursor: pointer;
+  color: s.$button-color;
+  font-size: s.$content-font;
+  font-weight:bold;
+  // border:1px solid #000;
+
+  &:hover{ opacity: 0.7; }
+}
 .detailsHead {
-  margin-top: 24px;
-  padding-left: s.$side-padding;
-  display: none;
-  
-  // border:1px solid orange;
+  padding: 24px s.$side-padding 0;
   h3 {
     font-size: s.$heading-font;
     line-height:2.4rem;
   }
+  p {
+    font-size: s.$content-font;
+    line-height: 2rem; 
+  }
 }
 .detailsBody {
   margin-top: 24px;
-  padding-left: s.$side-padding;
+  padding: 0 s.$side-padding;
   font-size: s.$content-font;
-  padding-bottom: 50px;
-  display: none;
 
-  tables {
-    // border:1px solid #000;
-
+  table {
+    width:100%;
+    border-collapse: collapse;
     tr {
-      display:flex;
-      justify-content: space-between;
-
-      td {
-        // border:1px solid #000;
-      }
+      font-weight: 500;
+      height: 24px;
+      td:nth-child(1){ width: 10%; }
+      td:nth-child(2){ width: 14%; }
+      td:nth-child(3){ width: 9%; }
+      td:nth-child(4){ width: 10%; }
+      td:nth-child(5){ width: 6%; }
+      td:nth-child(6){ width: 13%; }
+      td:nth-child(7){ width: 9%; }
+      td:nth-child(8){ width: 9%; }
+      td:nth-child(9){ width: 15%; }
+      // border:1px solid #000;
     }
-  }
-  .category {
-    font-weight: bold;
+    .category { font-weight: bold; }
+    .categInfo { color: s.$button-color; }
   }
 }

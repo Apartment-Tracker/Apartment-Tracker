@@ -1,7 +1,7 @@
 /* Colors */
 $base-color: #F5F5F5;
 $primary-color: #FCFCFC;
-// $secondary-color: #;
+$secondary-color: #E5E5E5;
 $button-color: #18A0FB;
 
 /* Font Sizes */
@@ -13,6 +13,8 @@ $side-padding: 32px;
 
 /* Default Background */
 body { background-color: #F5F5F5; }
+
+#app { width:100%; min-width:900px; }
 
 /* Reset */
 body,div,p,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,table,tr,th,td,form,fieldset,legend,input,label,select,textarea,button,

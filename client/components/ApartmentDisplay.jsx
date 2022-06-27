@@ -2,32 +2,45 @@ import React from 'react';
 import '@fortawesome/fontawesome-free/js/all';
 
 const ApartmentDisplay = props => {
-  const { content } = props;
+  const { aptInfo, showDetails } = props;
+  
+  // Match with DB column names
+  const data = {
+    aptName: aptInfo.name,
+    aptCity: aptInfo.city,
+    aptState: aptInfo.state,
+    aptRent: aptInfo.rent,
+    aptBed: aptInfo.bed,
+    aptBath: aptInfo.bath,
+    aptMovein: aptInfo.movein,
+    aptPet: aptInfo.pet,
+    aptSqft: aptInfo.sqft,
+  }
 
   return(
     <div className="aptTable row">
       <div className="apartment toLeft">
-        {content.apartment_name}
+        {data.aptName}
       </div>
       <div className="location toLeft">
-        {content.location_city.concat(", " + content.location_state)}
+        {data.aptCity.concat(", " + data.aptState)}
       </div>
       <div className="rent">
-        {content.apartment_rent}
+        {data.aptRent}
       </div>
       <div className="bedbath">
-        {content.apartment_bed.concat(" / " + content.apartment_bath)}
+        {data.aptBed} / {data.aptBath}
       </div>
       <div className="movein">
-        {content.apartment_movein}
+        {data.aptMovein ? data.aptMovein : 'null'}
       </div>
       <div className="pet">
-        {content.apartment_pet ? 'O' : 'X'}
+        {data.aptPet ? <i className="fa-solid fa-o"></i> : <i className="fa-solid fa-x"></i>}
       </div>
       <div className="sqft sqftH">
-        {content.apartment_sqft}
+        {data.aptSqft}
       </div>
-      <div className="details dH">
+      <div className="details dH" onClick={showDetails}>
         <i className="showDetails fa-solid fa-caret-down"></i>
       </div>
     </div>

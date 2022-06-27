@@ -1,38 +1,85 @@
-nav{
-    // display : flex;
-    // justify-content: space-between;
-    background-color: #f6f6f6;
-    height: 6em;
-    
+@use 'style' as s;
+
+#nav {
+    height: 74px;
+    padding: 9px s.$side-padding 0 s.$side-padding;
+    width:100%;
+    display:flex;
+    justify-content: space-between;;
+    align-items: center;
+    background-color: s.$primary-color;
+    // border:1px solid #000;
 }
-.category{
-    display: grid;
-    grid-template-columns: 5% 82% 10% 3%;
-    padding-top: 1.5em;
-   
-}
+
 #logo{
-    margin-left: 30%;
-    height: 34px;
-    width: 34px;
+    float:left;
+    height: 50px;
+    width: 50px;
     border-radius: 5px;
-    // background-color: #E5E5E5;
-    background: url("../media/logo.png") center/contain no-repeat;
+    background: url("../media/logo.png") center/cover no-repeat;
+    background-color: skyblue;
+    // border:1px solid #000;
 }
-.back{
-    line-height: 25px;
-    text-decoration: underline;
+
+.rightnav{  
+    float:left;
+    height: 50px;
+    padding-top: 6px;
+    margin-left: 10px;
+    display: flex;
+    // border:1px solid #000;
+
+    h2 { font-size: s.$heading-font; font-weight: 550; }
+
+    #back { 
+      display: flex; 
+      margin-top: 8px;
+      padding-left: 2px;
+      font-size: 1.2rem; 
+      font-weight: 480;
+      opacity: 0.5;
+
+      p {margin-left: 3px;}
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.9;
+      }
+      transition: opacity 0.2s linear;
+    }
 }
-#profile{
-    height: 23px;
-    width: 23px;
-    background-color: #E5E5E5;
-    border-radius: 50%;
-}
-#search{
-    height: 23px;
-    width: 120px;
-    border-radius: 15px;
-    border-style: none;
-    background-color: #E5E5E5;
+
+.leftnav {
+    height:50px;
+    float:right;
+    padding-top:12px;
+    // border:1px solid #000;
+    
+    .searchIcon {
+      cursor: pointer;
+      position: relative;
+      top:8px;
+      right:200px;
+      font-size: 12px;
+      &:hover { opacity: 0.7; }
+      transition:opacity 0.2s linear;
+    }
+    #search{
+        float:left;
+        height: 28px;
+        width: 200px;
+        margin-right: 10px;
+        border-radius: 15px;
+        border-style: none;
+        background-color: s.$secondary-color;
+        padding-left: 30px;
+    }
+
+    #profile{
+        float:right;
+        width: 28px;
+        height: 28px;
+        background-color: orange;
+        border-radius: 50%;
+    }
 }

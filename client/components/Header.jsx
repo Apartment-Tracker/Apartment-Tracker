@@ -3,6 +3,11 @@ import Button from "./Button.jsx";
 import '../stylesheets/header.scss';
 
 const Header = props => {
+
+  const onClick = () => {
+    document.getElementById('apartmentForm').style.display = 'block';
+  };
+
   const columns = {
     c1: 'Apartment Name',
     c2: 'Location',
@@ -17,12 +22,12 @@ const Header = props => {
   return(
     <div>
       <div className="header">
-        <Button btnname="Add Apartment" create='sendPOSTRequest'/>
+        <Button btnname="Add Apartment" onClick={onClick} create='sendPOSTRequest'/>
         <div className="sort">
           <span>Sort: </span>
           <select>
             <option value="movein">Date</option>
-            <option selected value="rent">Rent</option>
+            <option defaultValue="rent">Rent</option>
             <option value="bed">Bed</option>
             <option value="bath">Bath</option>
             <option value="sqft">Sq ft</option>
