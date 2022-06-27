@@ -8,6 +8,7 @@
   display: flex;
   align-items: center;
   padding-left: s.$side-padding;
+  padding-right: s.$side-padding;
   text-align: center;
   // border:1px solid #000;
 
@@ -70,9 +71,12 @@
   font-size: s.$content-font;
   padding-bottom: 50px;
   display: none;
+  padding-right: s.$side-padding;
 
-  tables {
-    // border:1px solid #000;
+  table {
+    width:100%;
+    min-width: 840px;
+    border:1px solid #000;
 
     tr {
       display:flex;

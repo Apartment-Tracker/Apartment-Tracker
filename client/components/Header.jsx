@@ -22,7 +22,7 @@ const Header = props => {
           <span>Sort: </span>
           <select>
             <option value="movein">Date</option>
-            <option selected value="rent">Rent</option>
+            <option defaultValue="rent">Rent</option>
             <option value="bed">Bed</option>
             <option value="bath">Bath</option>
             <option value="sqft">Sq ft</option>

@@ -22,7 +22,7 @@ const ApartmentDisplay = props => {
         {content.apartment_movein}
       </div>
       <div className="pet">
-        {content.apartment_pet ? 'O' : 'X'}
+        {content.apartment_pet ? <i className="fa-solid fa-o"></i> : <i className="fa-solid fa-x"></i>}
       </div>
       <div className="sqft sqftH">
         {content.apartment_sqft}

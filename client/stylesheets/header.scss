@@ -2,18 +2,18 @@
 
 // Header.jsx
 .header {
+  margin-top:0px;
   padding-left: s.$side-padding;
+  padding-right: s.$side-padding;
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: s.$primary-color;
-//   border: 1px solid #000;
+  // border: 1px solid #000;
 }  
 
-.sort {
-  margin-right: 32px;
-}
+.sort { margin-right: 10px; }
 
 span {
   font-size: s.$content-font;

@@ -16,7 +16,7 @@ const ApartmentDetails = props => {
         <p>{data.apartment_contact}</p>
       </div>
       <div className="detailsBody">
-        <tables>
+        <table>
           <tr>
             <td className="category">Rent</td>
             <td className="categInfo">{data.apartment_rent}</td>
@@ -53,7 +53,7 @@ const ApartmentDetails = props => {
             <td className="category">Air Conditioning</td>
             <td className="categInfo">{data.features_ac ? 'Yes' : 'No'}</td>
           </tr>
-        </tables>
+        </table>
       </div>
     </div>
   )
