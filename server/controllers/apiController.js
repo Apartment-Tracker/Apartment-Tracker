@@ -6,7 +6,12 @@ const apiController = {};
 
 apiController.getApt = async (req, res, next) => {
   try {
-  } catch (err) {
+    const text = `SELECT a.*, f.*, l.* FROM apartment a FULL OUTER JOIN features f ON a.features_id = f._id FULL OUTER JOIN locations l ON a.locations_id = l._id;`
+    const result = await db.query(text);
+    res.locals.aptData = result.rows;
+    return next ();
+  } 
+  catch (err) {
     next({
       log: `apiController.getApt: ERROR ${err}`,
       message: { err: 'Error occurred in apiController.getApt' },

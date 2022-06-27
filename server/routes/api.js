@@ -5,8 +5,8 @@ const apiController = require('../controllers/apiController.js');
 //Require controller/middleware
 
 //GET request to display all rows
-router.get('/', (req, res) => {
-  res.status(200).json({});
+router.get('/', apiController.getApt, (req, res) => { 
+  res.status(200).json(res.locals.aptData);
 });
 
 //POST request to create a new row
