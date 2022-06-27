@@ -3,7 +3,7 @@ import Button from "./Button.jsx";
 
 const CreateApartment = props => (
   <div>
-    <Button />
+    {/* <Button btnname="Save"/> */}
   </div>
 )
 

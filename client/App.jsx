@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import Navigation from './components/Navigation.jsx';
 import Main from './components/Main.jsx';
 import './stylesheets/style.scss';
+import { BrowserRouter } from 'react-router-dom';
+import Home from './components/Home.jsx'
+
 
 class App extends Component {
   render() {
@@ -9,11 +12,6 @@ class App extends Component {
       <div>
         <Navigation />
         <Main />
-        <ul>
-          <li>Hi</li>
-          <li>Hi</li>
-          <li>Hi</li>
-        </ul>
       </div>
     );
   };
