@@ -12,22 +12,22 @@ class Apartment extends Component {
     // this.showDetails = this.showDetails.bind(this);
   }
 
-  // showDetails() {
-  //   const show = this.state.show;
-  //   show = show ? !show : show;
-  //   this.setState({ show })
-  // }
+  showDetails() {
+    const show = this.state.show;
+    show = show ? !show : show;
+    this.setState({ show })
+  }
   
   render() {
     const { aptInfo } = this.props;
-    // const details = this.state.stats ? <ApartmentDetails aptInfo={aptInfo} status={this.state.show} /> : <></>;
+    const details = this.state.stats ? <ApartmentDetails aptInfo={aptInfo} status={this.state.show} /> : <></>;
 
     return (
       <div>
         {/* <ApartmentDisplay aptInfo={aptInfo} showDetails={this.showDetails} /> */}
         <ApartmentDisplay aptInfo={aptInfo} />
-        <ApartmentDetails aptInfo={aptInfo} />
-        {/* {details} */}
+        {/* <ApartmentDetails aptInfo={aptInfo} /> */}
+        {details}
       </div>
     )
   }

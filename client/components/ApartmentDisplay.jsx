@@ -29,7 +29,7 @@ const ApartmentDisplay = props => {
         {data.aptRent}
       </div>
       <div className="bedbath">
-        {/* {data.aptBed.concat(" / " + data.aptBath)} */}
+        {data.aptBed} / {data.aptBath}
       </div>
       <div className="movein">
         {data.aptMovein ? data.aptMovein : 'null'}
@@ -40,7 +40,7 @@ const ApartmentDisplay = props => {
       <div className="sqft sqftH">
         {data.aptSqft}
       </div>
-      <div className="details dH">
+      <div className="details dH" onClick={showDetails}>
         <i className="showDetails fa-solid fa-caret-down"></i>
       </div>
     </div>
