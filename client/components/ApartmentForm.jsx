@@ -92,7 +92,7 @@ class ApartmentForm extends Component {
                 </div>
                 <div className="horizontalBlock">
                   <label>Address</label><br/>
-                  <input type="text" name="address" className="addressBox inputbox">
+                  <input type="text" name="address" className="addressBox inputbox"/>
                 </div>
               </div>
 
