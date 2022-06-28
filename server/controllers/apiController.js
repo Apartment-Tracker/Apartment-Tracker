@@ -38,7 +38,6 @@ apiController.addApt = async (req, res, next) => {
     ac,
     patio,
     balcony,
-    pool,
     gym,
     fan,
     ceilinglight,
@@ -52,8 +51,8 @@ apiController.addApt = async (req, res, next) => {
     const text1 = `INSERT into apartment (name, unit, rent, deposit, lease, bed, bath, sqft, movein, pet, contact, url)
         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
         RETURNING *`;
-    const text2 = `INSERT into features(floor, dishwasher, ac, patio, balcony, pool, gym, fan, ceilinglight)
-        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
+    const text2 = `INSERT into features(floor, dishwasher, ac, patio, balcony,  gym, fan, ceilinglight)
+        VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
         RETURNING *`;
     const text3 = `INSERT into locations (city, state, zipcode, address)
         VALUES ($1, $2, $3, $4)
@@ -78,7 +77,6 @@ apiController.addApt = async (req, res, next) => {
       ac,
       patio,
       balcony,
-      pool,
       gym,
       fan,
       ceilinglight,
@@ -118,7 +116,6 @@ apiController.updateApt = async (req, res, next) => {
     ac,
     patio,
     balcony,
-    pool,
     gym,
     fan,
     ceilinglight,
@@ -146,14 +143,13 @@ apiController.updateApt = async (req, res, next) => {
       url,
     ];
     const queryFeatures = `UPDATE features 
-SET (dishwasher, ac, patio, balcony, pool, gym, fan, ceilinglight) = ($1, $2, $3, $4, $5, $6, $7, $8)
+SET (dishwasher, ac, patio, balcony, gym, fan, ceilinglight) = ($1, $2, $3, $4, $5, $6, $7)
 WHERE _id = ${id}`;
     const paramsFeatures = [
       dishwasher,
       ac,
       patio,
       balcony,
-      pool,
       gym,
       fan,
       ceilinglight,
