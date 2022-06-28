@@ -31,6 +31,9 @@ const ApartmentDetails = props => {
     aptAc: aptInfo.ac,
   }
 
+  let aptMovein = new Date(data.aptMovein);
+  aptMovein = aptMovein.toLocaleDateString();
+
   return (
     <div className="fullDetail">
       <div className="editInfo">Edit</div>
@@ -49,42 +52,44 @@ const ApartmentDetails = props => {
       </div>
       <div className="detailsBody">
         <table>
-          <tr>
-            <td className="category">Rent</td>
-            <td className="categInfo">{data.aptRent}</td>
-            <td className="category">Deposit</td>
-            <td className="categInfo">{data.aptDeposit}</td>
-            <td className="category">Floor</td>
-            <td className="categInfo">{data.aptFloor}</td>
-            <td className="category">Balcony</td>
-            <td className="categInfo">{data.aptBalcony ? 'Yes' : 'No'}</td>
-            <td className="category">Dishwasher</td>
-            <td className="categInfo">{data.aptDishwasher ? 'Yes' : 'No'}</td>
-          </tr>
-          <tr>
-            <td className="category">Move-In</td>
-            <td className="categInfo">{data.aptMovein}</td>
-            <td className="category">Lease</td>
-            <td className="categInfo">{data.aptLease}</td>
-            <td className="category">Gym</td>
-            <td className="categInfo">{data.aptGym ? 'Yes' : 'No'}</td>
-            <td className="category">Patio</td>
-            <td className="categInfo">{data.aptPatio ? 'Yes' : 'No'}</td>
-            <td className="category">Ceiling Light</td>
-            <td className="categInfo">{data.aptCeilinglight ? 'Yes' : 'No'}</td>
-          </tr>
-          <tr>
-            <td className="category">Bed/Bath</td>
-            <td className="categInfo">{data.aptBed}/{data.aptBath}</td>
-            <td className="category">Sqft</td>
-            <td className="categInfo">{data.aptSqft}</td>
-            <td className="category">Pet</td>
-            <td className="categInfo">{data.aptPet ? 'Yes' : 'No'}</td>
-            <td className="category">Fan</td>
-            <td className="categInfo">{data.aptFan ? 'Yes' : 'No'}</td>
-            <td className="category">Air Conditioning</td>
-            <td className="categInfo">{data.aptAc ? 'Yes' : 'No'}</td>
-          </tr>
+          <tbody>
+            <tr>
+              <td className="category">Rent</td>
+              <td className="categInfo">{data.aptRent}</td>
+              <td className="category">Deposit</td>
+              <td className="categInfo">{data.aptDeposit}</td>
+              <td className="category">Floor</td>
+              <td className="categInfo">{data.aptFloor}</td>
+              <td className="category">Balcony</td>
+              <td className="categInfo">{data.aptBalcony ? 'Yes' : 'No'}</td>
+              <td className="category">Dishwasher</td>
+              <td className="categInfo">{data.aptDishwasher ? 'Yes' : 'No'}</td>
+            </tr>
+            <tr>
+              <td className="category">Move-In</td>
+              <td className="categInfo">{aptMovein}</td>
+              <td className="category">Lease</td>
+              <td className="categInfo">{data.aptLease}</td>
+              <td className="category">Gym</td>
+              <td className="categInfo">{data.aptGym ? 'Yes' : 'No'}</td>
+              <td className="category">Patio</td>
+              <td className="categInfo">{data.aptPatio ? 'Yes' : 'No'}</td>
+              <td className="category">Ceiling Light</td>
+              <td className="categInfo">{data.aptCeilinglight ? 'Yes' : 'No'}</td>
+            </tr>
+            <tr>
+              <td className="category">Bed/Bath</td>
+              <td className="categInfo">{data.aptBed}/{data.aptBath}</td>
+              <td className="category">Sqft</td>
+              <td className="categInfo">{data.aptSqft}</td>
+              <td className="category">Pet</td>
+              <td className="categInfo">{data.aptPet ? 'Yes' : 'No'}</td>
+              <td className="category">Fan</td>
+              <td className="categInfo">{data.aptFan ? 'Yes' : 'No'}</td>
+              <td className="category">Air Conditioning</td>
+              <td className="categInfo">{data.aptAc ? 'Yes' : 'No'}</td>
+            </tr>
+          </tbody>
         </table>
       </div>
     </div>

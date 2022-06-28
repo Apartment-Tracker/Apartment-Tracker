@@ -18,7 +18,7 @@
   }
 }
 
-.apartment { width:24%; }
+.apartment { position: relative; width:24%; }
 .location { width:12%; }
 .rent { width:11%; }
 .bedbath { width:13%; }
@@ -26,6 +26,13 @@
 .pet { width:9%; }
 .sqft { width:9%; }
 .details { width:9%; }
+
+.rightline {
+  position: relative;
+  right:16px;
+  height:45px;
+  border-right: 2px solid s.$base-color;
+}
 
 // ApartmentDisplay.jsx
 .toLeft { text-align: left; }

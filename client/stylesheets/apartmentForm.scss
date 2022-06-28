@@ -10,14 +10,14 @@
   top: 100px; left: 50%;
   transform: translateX(-50%);
   width: 50%;
-  min-width: 650px;
-  // min-width: 480px;
+  min-width:700px;
   height: 580px;
   border-radius: 10px;
   background-color: rgba(215, 215, 215, 0.9);
   animation: docshow 0.15s linear;
   display: none;
   // border:1px solid #000;
+  z-index: 99;
 }
 .btnbox {
   position:absolute;
@@ -34,25 +34,54 @@
 .space{
   margin-left: 8px;
 }
-.inputbox {
-  height: 25px; 
+.nameBox{
+  width:350px;
+  height: 25px;
   margin-top: 5px;
-
-  &.nameBox { width: 350px; }
-  &.smallBox { width: 40px; }
-  &.sqftBox { width: 80px; }
-  &.leaseBox { width: 160px; }
-  &.addressBox { width: 340px; }
-  &.unitBox { width: 80px; }
-  &.movinBox { width: 260px; }
-  &.rentBox { width: 200px; }
-  &.depositBox { width: 140px; }
-  &.cityBox { width: 205px; }
 }
-
+.smallBox{
+  width: 40px;
+  height: 25px;
+  margin-top: 5px;
+}
+.sqftBox{
+  width: 80px;
+  height: 25px;
+  margin-top: 5px;
+}
+.leaseBox{
+  width: 160px;
+  height: 25px;
+  margin-top: 5px;
+}
+.addressBox{
+  width:340px;
+  height: 25px;
+  margin-top: 5px;
+}
+.unitBox{
+  width: 80px;
+  height: 25px;
+  margin-top: 5px;
+}
+.movinBox{
+  width:260px;
+  height: 25px;
+  margin-top: 5px;
+}
+.rentBox{
+  width:200px;
+  height: 25px;
+  margin-top: 5px;
+}
+.depositBox{
+  width:140px;
+  height: 25px;
+  margin-top: 5px;
+}
 #formGrid{
   display: grid;
-  grid-template-columns: 500px 300px;
+  grid-template-columns: 450px 300px;
   padding-top: 30px;
   padding-left: 30px;
 }
@@ -65,9 +94,14 @@ body{
 .aptInfo{
   margin-top: 15px;
 }
-// .location{
-  // margin-top: 30px;
-// }
+.locationn{
+  margin-top: 30px;
+}
+.cityBox{
+  width:205px;
+  height: 25px;
+  margin-top: 5px;
+}
 .moreInfo{
   margin-top: 15px;
   line-height: 25px;
@@ -77,12 +111,11 @@ body{
   line-height: 25px;
 }
 .contact{
-  height:30px;
   margin-top: 23px;
 }
 #contactBox{
-  width: 170px;
-  height: 30px;
+  width:190px;
+  height: 25px;
   margin-top: 5px;
 }
 .link{
