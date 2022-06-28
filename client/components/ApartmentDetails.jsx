@@ -31,6 +31,9 @@ const ApartmentDetails = props => {
     aptAc: aptInfo.ac,
   }
 
+  let aptMovein = new Date(data.aptMovein);
+  aptMovein = aptMovein.toLocaleDateString();
+
   return (
     <div className="fullDetail">
       <div className="editInfo">Edit</div>
@@ -64,7 +67,7 @@ const ApartmentDetails = props => {
             </tr>
             <tr>
               <td className="category">Move-In</td>
-              <td className="categInfo">{data.aptMovein}</td>
+              <td className="categInfo">{aptMovein}</td>
               <td className="category">Lease</td>
               <td className="categInfo">{data.aptLease}</td>
               <td className="category">Gym</td>
