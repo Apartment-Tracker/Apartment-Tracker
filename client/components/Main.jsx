@@ -49,7 +49,6 @@ class Main extends Component {
       aptIds: this.state.aptIds, 
       apartments: this.state.aptsById,
     };
-
     return (
       <div>
         <Header />
