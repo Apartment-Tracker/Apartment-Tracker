@@ -17,13 +17,17 @@ const ApartmentDisplay = props => {
     aptSqft: aptInfo.sqft,
   }
 
+  let aptMovein = new Date(data.aptMovein);
+  aptMovein = aptMovein.toLocaleDateString();
+
   return(
     <div className="aptTable row">
       <div className="apartment toLeft">
         {data.aptName}
       </div>
+      <div className='rightline'></div>
       <div className="location toLeft">
-        {data.aptCity.concat(", " + data.aptState)}
+        {data.aptCity}, {data.aptState}
       </div>
       <div className="rent">
         {data.aptRent}
@@ -32,7 +36,7 @@ const ApartmentDisplay = props => {
         {data.aptBed} / {data.aptBath}
       </div>
       <div className="movein">
-        {data.aptMovein ? data.aptMovein : 'null'}
+        {aptMovein ? aptMovein : 'null'}
       </div>
       <div className="pet">
         {data.aptPet ? <i className="fa-solid fa-o"></i> : <i className="fa-solid fa-x"></i>}
